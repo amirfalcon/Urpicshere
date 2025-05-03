@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحذير: جهازك مخترق!</title>
+    <style>
+      body {
+        background-color: red;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 100px;
+      }
+      h1 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 20px;
+      }
+      .message {
+        font-size: 18px;
+        color: yellow;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      .apology {
+        color: lightgreen;
+        font-size: 20px;
+        font-weight: normal;
+        margin-top: 30px;
+        display: none; /* تكون مخفية في البداية */
+      }
+    </style>
+    <script>
+      // أول رسالة تحذير "مخيفة"
+      alert("تحذير: جهازك مخترق!");
+      alert("تم سرقة جميع بياناتك الخاصة!");
+      alert("أنت الآن تحت المراقبة! سيتم تدمير ملفاتك في اي لحضة!");
+
+      // بعد 5 ثواني من الرسائل المخيفة يظهر التحذير الجاد
+      setTimeout(function() {
+        document.getElementById("apology").style.display = "block"; // إظهار رسالة تطلب الاعتذار
+      }, 5000);  // بعد 5 ثواني من التحذيرات يظهر طلب الاعتذار
+    </script>
+  </head>
+  <body>
+    <h1>تحذير: جهازك مخترق!</h1>
+    <p>لقد تم سرقة جميع بياناتك الشخصية!</p>
+    <p>جميع ملفاتك تحت السيطرة الآن!</p>
+    <p class="message">يرجى إيقاف تشغيل الجهاز فورًا!</p>
+    <p id="apology" class="apology">
+      تحذير شديد! لا يمكن التراجع عن هذه الأفعال إلا إذا تقدمت بالاعتذار لي فورًا.
+      يجب أن تعترف بخطأك حتى أتمكن من التراجع عن هذه العملية و شكرا!
+    </p>
+  </body>
+</html>
